@@ -1,0 +1,24 @@
+{
+    "request": {
+        "method": "POST",
+        "url": "/api/login",
+        "bodyPatterns": [
+            {
+                "equalToJson": "{}"
+            }
+        ]
+    },
+    "response": {
+        "status": 400,
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "jsonBody": {
+            "resultType": "FAIL",
+            "error": {
+                "errorCode": "INVALID_REQUEST",
+                "reason": "휴대폰 번호와 비밀번호를 입력해주세요."
+            }
+        }
+    }
+}

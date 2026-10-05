@@ -1,0 +1,24 @@
+{
+    "request": {
+        "method": "POST",
+        "url": "/api/login",
+        "bodyPatterns": [
+            {
+                "equalToJson": "{\"phone\":\"01012345678\",\"password\":\"wrong1234\"}"
+            }
+        ]
+    },
+    "response": {
+        "status": 401,
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "jsonBody": {
+            "resultType": "FAIL",
+            "error": {
+                "errorCode": "INVALID_CREDENTIALS",
+                "reason": "휴대폰 번호 또는 비밀번호가 올바르지 않습니다."
+            }
+        }
+    }
+}
